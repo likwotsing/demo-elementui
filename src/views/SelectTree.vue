@@ -40,8 +40,6 @@ export default {
         })
       },
       set: function (val) {
-        // 设置tree
-        // 从选中的node里筛选出全部的val，用筛选的结果设置tree
         var flag = false
         // 删除点击的tag
         // selectLeafNodes需要改变, value1会跟着变化
@@ -57,6 +55,7 @@ export default {
             return c
           }
         })
+        // 设置tree
         this.$refs.tree.setCheckedNodes(this.selectLeafNodes)
       }
     }
